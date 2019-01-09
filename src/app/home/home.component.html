@@ -1,0 +1,15 @@
+<h3
+  [ngStyle]="{
+    color: h3Style ? 'pink' : 'green',
+    'font-size': !h3Style ? '1em' : '4em'
+  }"
+>
+  Home
+</h3>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar" />
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
